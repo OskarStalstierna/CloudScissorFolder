@@ -1,0 +1,48 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100vw;
+    text-align: center;
+    
+}
+
+#center {
+    width: auto;
+    height: auto;
+}
+
+.infoBox {
+    width: auto;
+    height: auto;
+    background: white;
+}
+
+button {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: coral;
+    border: none;
+}
+
+button:hover {
+    background-color: aquamarine;
+    transition: all(400ms)ease-in-out;
+}
+
+button i {
+    margin-right: 10px;
+    font-size: 24px;
+}
