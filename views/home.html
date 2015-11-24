@@ -1,13 +1,42 @@
+<div class="wrapper">
+    <h3>{{title}}</h3>
+    <div id="center">
+        <button ng-click="startGame('sten')"><i class="fa fa-hand-rock-o"></i></button>
+        <button ng-click="startGame('sax')"><i class="fa fa-hand-scissors-o"></i></button>
+        <button ng-click="startGame('påse')"><i class="fa fa-hand-paper-o"></i></button>
+        <button ng-click="startGame('ödla')"><i class="fa fa-hand-lizard-o"></i></button>
+        <button ng-click="startGame('spock')"><i class="fa fa-hand-spock-o"></i></button>
+    </div>
+    <div class="infoBox">
+        <p>{{info}}</p>
+        <p>Datorns val: {{comChoise}}</p>
+    </div>
 
-<h3>{{title}}</h3>
-<div id="center">
-    <button ng-click="startGame('sten')"><i class="glyphicon glyphicon-cloud"></i></button>
-    <button ng-click="startGame('sax')"><i class="glyphicon glyphicon-scissors"></i></button>
-    <button ng-click="startGame('påse')"><i class="glyphicon glyphicon-folder-close"></i></button>
-
-    <output><p>Din Poäng:</p>{{playerScore}}</output>
-    <output><p>Datorns Poäng:</p>{{comScore}}</output>
+    <div class="scoreBoard">
+        <output><p>Din Poäng:</p>{{playerScore}}</output>
+        <output><p>Datorns Poäng:</p>{{comScore}}</output>
+    </div>
 </div>
-<div class="infoBox">
-    <p>{{info}}</p>
+
+<div class="rules">
+    <img src="../img/RockPaperScissorsLizardSpock.jpg" alt="">
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="reset-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">{{message}}</h4>
+      </div>
+      <div class="modal-body">
+            <output><p>Din Poäng:</p>{{playerScore}}</output>
+            <output><p>Datorns Poäng:</p>{{comScore}}</output>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" ng-click="reset()">Nytt Spel</button>
+      </div>
+    </div>
+  </div>
 </div>
